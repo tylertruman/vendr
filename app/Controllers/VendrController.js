@@ -10,7 +10,6 @@ function _drawSnacks(){
 }
 
 function _drawTotal(){
-    ProxyState.money = 0
     document.getElementById('total').innerText = ProxyState.money
 }
 
@@ -19,12 +18,13 @@ export class VendrController{
         console.log('Vendr Controller loaded');
         _drawSnacks()
         _drawTotal()
+        ProxyState.on('money', _drawTotal)
      }
 
      buyItem(name){
         vendrService.buyItem(name)
         _drawTotal()
-        
+        _drawSnacks()
         
      }
 }
