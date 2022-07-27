@@ -1,5 +1,7 @@
 /* BASIC STYLES HERE */
 img {
-    max-height: 250px;
-    max-width: 250px;
+    max-height: 65%;
+    max-width: 65%;
+    min-height: 65%;
+    min-width: 65%;
 }

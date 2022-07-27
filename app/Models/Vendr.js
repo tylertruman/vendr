@@ -10,9 +10,10 @@ export class Snack {
 
     get Template(){
         return `
-            <div id="${this.name}" class="col-6 text-center">
+            <div id="${this.name}" class="col-4 text-center mt-3">
                 <h5>${this.name} | in cart: ${this.qty}</h5>
               <img class="rounded" src="${this.img}">
+              <br>
               <button class="btn btn-danger mt-1" onclick="app.vendrController.buyItem('${this.name}')">BUY | $${this.price}</button>
             </div>`
     }
